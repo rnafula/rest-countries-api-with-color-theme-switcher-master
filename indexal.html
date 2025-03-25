@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API COUNTRIES</title>
+  </head>
+  <body>
+    <header>
+      <div class="paragraph"><h2>Where in the World?</h2></div>
+      <div class="mode">
+        <img src="/darkmode_light-removebg-preview.png" alt="" /><span
+          >Dark Mode</span
+        >
+      </div>
+    </header>
+    <main class="home">
+      <section class="user_input">
+        <div>
+          <input
+            type="search"
+            name="country"
+            id="country"
+            value="Search for a Country"
+          />
+        </div>
+
+        <select name="region" id="region" placeholder="Filter by Region">
+          <option>Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </section>
+      <div class="home-countries"></div>
+    </main>
+    <style>
+      body {
+        background-color: hsl(207, 26%, 17%);
+        color: hsl(0, 0%, 100%);
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        background-color: hsl(209, 23%, 22%);
+        padding: 10px;
+      }
+      header div img {
+        width: 10%;
+      }
+      .paragraph {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+      }
+      .mode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user_input {
+        display: flex;
+        justify-content: space-between;
+      }
+      .home {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+      }
+      input[type="search"] {
+        background-color: hsl(209, 23%, 22%);
+        color: hsl(0, 0%, 100%);
+        width: 150%;
+        border-radius: 8px;
+        border: none;
+        padding: 10px;
+      }
+      select {
+        background-color: hsl(209, 23%, 22%);
+        color: hsl(0, 0%, 100%);
+        width: 15%;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .home-countries {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .country-container {
+        border-radius: 6px;
+        width: 22%;
+        background-color: hsl(209, 23%, 22%);
+        text-align: center;
+      }
+      .country-container > img {
+        width: 100%;
+      }
+    </style>
+    <script src="/restal.js"></script>
+  </body>
+</html>
