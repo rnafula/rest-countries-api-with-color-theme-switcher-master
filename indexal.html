@@ -8,11 +8,11 @@
   <body>
     <header>
       <div class="paragraph"><h2>Where in the World?</h2></div>
-      <div class="mode">
+      <button class="mode-button">
         <img src="/darkmode_light-removebg-preview.png" alt="" /><span
           >Dark Mode</span
         >
-      </div>
+      </button>
     </header>
     <main class="home">
       <section class="user_input">
@@ -20,15 +20,15 @@
           <input
             type="search"
             name="country"
-            id="country"
-            value="Search for a Country"
+            id="country-input"
+            placeholder="Search for a Country"
           />
         </div>
 
-        <select name="region" id="region" placeholder="Filter by Region">
-          <option>Filter by Region</option>
+        <select name="region" id="region-select" placeholder="Filter by Region">
+          <option value="all">All</option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">Americas</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
@@ -47,7 +47,7 @@
         background-color: hsl(209, 23%, 22%);
         padding: 10px;
       }
-      header div img {
+      header button img {
         width: 10%;
       }
       .paragraph {
@@ -56,10 +56,12 @@
         align-items: center;
         width: 35%;
       }
-      .mode {
+      .mode-button {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: hsl(209, 23%, 22%);
+        border: none;
       }
       .user_input {
         display: flex;
@@ -100,6 +102,23 @@
       }
       .country-container > img {
         width: 100%;
+      }
+      body.dark-mode {
+        background-color: hsl(0, 0%, 95%);
+        color: hsl(207, 26%, 12%);
+      }
+
+      .dark-mode header {
+        background-color: hsl(200, 20%, 91%);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.861);
+      }
+
+      .dark-mode .country-container,
+      .dark-mode .mode-button,
+      .dark-mode input[type="search"],
+      .dark-mode select {
+        background-color: hsl(200, 20%, 91%);
+        color: hsl(207, 26%, 12%);
       }
     </style>
     <script src="/restal.js"></script>
